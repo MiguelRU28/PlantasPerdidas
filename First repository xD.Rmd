@@ -1,0 +1,71 @@
+---
+title: "Exploracion de Plantas Extintas"
+author: "Miguel Romero"
+date: "13/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE, }
+knitr::opts_chunk$set(echo = TRUE, message=FALSE,comment=NULL, warning=FALSE)
+```
+
+
+```{r loading packages,echo=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+
+
+# Es importante observar las base de datos
+
+
+Para colocar un link xD
+[HERE](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+[Mi Github](https://github.com/MiguelRU28/PlantasPerdidas/blob/master/PlantasPerdidas.Rproj)
+
+Estos datos sobre plantas extintas (perdidas) son pertenecientes __IUCN__, y se obtuvieron del siguiente repositorio en github:
+
+[Link 1](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv)
+
+[Link 2](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv)
+
+[Link 3](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv)
+
+
+# Chunks:
+Aqui tengo codigo
+```{r here have cod}
+plants <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+actions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/actions.csv")
+threats <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/threats.csv")
+
+```
+
+
+#### Algunas generalidades para el Chunks:
+
+echo = T o F muestro o no codigo
+message = T o F muestra mensajes de paquetes
+warning = T o F muestra advertencias
+eval = T o F evaluar o no el código
+cache = T o F guarda o no el resultado, para no recalcular porque se guardara si es TRUE
+Para más opciones ver este [linkxd](https://yihui.org/knitr/options/)
+
+
+## Datos de Sudamérica
+
+- Para la ortografia usar checkspeling
+
+El numero de especies que hay en sudamerica en funcion a la base de datos: `hello en r Xd` `r plants %>% filter(continent == "South America") %>% nrow()` especies.
+
+
+
+
+
+
+
+
+
